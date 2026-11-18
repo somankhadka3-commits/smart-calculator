@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#10131d">
+  <meta name="description" content="A clean, responsive calculator with keyboard support and calculation history.">
+  <title>Smart Calculator</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <main class="app-shell">
+    <header class="topbar">
+      <a class="brand" href="#" aria-label="Smart Calculator home"><span class="brand-mark">∑</span><span>smart<span class="brand-light">calc</span></span></a>
+      <div class="top-actions"><span class="status-dot"></span><span class="top-label">READY TO CALCULATE</span><button class="icon-button" id="themeToggle" aria-label="Toggle color theme" title="Toggle theme">☼</button></div>
+    </header>
+
+    <section class="workspace" aria-label="Calculator workspace">
+      <div class="calculator panel">
+        <div class="panel-heading"><div><p class="eyebrow">YOUR EVERYDAY TOOL</p><h1>Calculator</h1></div><span class="mode-pill">STANDARD</span></div>
+        <div class="display" aria-live="polite" aria-atomic="true">
+          <div class="expression" id="expression">Ready when you are</div>
+          <div class="result" id="result">0</div>
+        </div>
+        <div class="keypad" id="keypad">
+          <button class="key utility" data-action="clear">AC</button>
+          <button class="key utility" data-action="delete" aria-label="Delete last digit">⌫</button>
+          <button class="key utility" data-action="percent">%</button>
+          <button class="key operator" data-value="÷">÷</button>
+          <button class="key" data-value="7">7</button><button class="key" data-value="8">8</button><button class="key" data-value="9">9</button><button class="key operator" data-value="×">×</button>
+          <button class="key" data-value="4">4</button><button class="key" data-value="5">5</button><button class="key" data-value="6">6</button><button class="key operator" data-value="−">−</button>
+          <button class="key" data-value="1">1</button><button class="key" data-value="2">2</button><button class="key" data-value="3">3</button><button class="key operator" data-value="+">+</button>
+          <button class="key utility" data-action="sign">±</button><button class="key" data-value="0">0</button><button class="key" data-value=".">.</button><button class="key equals" data-action="equals">=</button>
+        </div>
+        <p class="keyboard-hint"><span>↵</span> Enter to calculate <span class="hint-separator">·</span> Esc to clear <span class="hint-separator">·</span> Use your keyboard</p>
+      </div>
+
+      <aside class="history panel">
+        <div class="history-heading"><div><p class="eyebrow">YOUR RECENT WORK</p><h2>History</h2></div><button id="clearHistory" class="text-button">Clear all</button></div>
+        <div id="historyList" class="history-list"><div class="empty-history"><span class="empty-icon">↗</span><p>No calculations yet</p><span>Your results will appear here.</span></div></div>
+        <div class="history-footer"><span class="history-indicator"></span> HISTORY IS SAVED ON THIS DEVICE</div>
+      </aside>
+    </section>
+    <footer><span>SMARTCALC <span class="footer-muted">· SIMPLE BY DESIGN</span></span><span>Made for everyday math <span class="footer-spark">✳</span></span></footer>
+  </main>
+  <noscript><p class="noscript">Please enable JavaScript to use Smart Calculator.</p></noscript>
+</body>
+</html>
